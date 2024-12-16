@@ -31,9 +31,7 @@
 
 1. Run Terraform commands:
     
-    ```bash
-    bash
-    Copy code
+    ```
     terraform init
     terraform plan
     terraform apply
@@ -50,9 +48,7 @@
 
 1. Access the application using the ALB DNS name from the Terraform output:
     
-    ```bash
-    bash
-    Copy code
+    ```
     http://<load_balancer_dns>
     
     ```
