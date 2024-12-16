@@ -1,7 +1,6 @@
-#### **Rearc Quest Submission from Sujit Ghodajkar**
+### **Rearc Quest Submission from Sujit Ghodajkar**
 
-Below are the steps to deploy the application in AWS:
-
+---
 
 ### **Summary Plan of Action for Deploying the our Node.js Application in AWS**
 
@@ -62,6 +61,9 @@ Below are the steps to deploy the application in AWS:
     - Index page displays the secret word.
     - `/docker`, `/secret_word`, and `/loadbalanced` endpoints work as expected.
 
+---
+
+### **Below are the steps to deploy the application in AWS**:
 
 ## **1. Prerequisites**
 
