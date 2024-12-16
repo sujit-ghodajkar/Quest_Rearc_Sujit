@@ -1,6 +1,66 @@
-Rearc Quest Submission from Sujit Ghodajkar
+#### **Rearc Quest Submission from Sujit Ghodajkar**
 
 Below are the steps to deploy the application in AWS:
+
+
+### **Summary Plan of Action for Deploying the our Node.js Application in AWS**
+
+### **Step 1: Set Up AWS Resources Using Terraform**
+
+1. **Create an S3 Bucket for Terraform State (optional)**
+    - Use Terraform to define remote backend for storing the state.
+2. **Define Resources in Terraform**:
+    - **ECR Repository**: For storing the Docker image.
+    - **ECS Cluster**: To host the tasks.
+    - **Task Definition**: Specify the container image, environment variables (e.g., `SECRET_WORD`), CPU/memory requirements.
+    - **Fargate Service**: Use Fargate to run the task and associate it with an Application Load Balancer (ALB).
+    - **ALB**: Configure HTTP listener, target group, and health checks.
+    - **Auto-Scaling Group**: Define scaling policies to trigger based on CPU usage >70%.
+3. **Network Configuration**:
+    - Create a VPC, subnets (public/private), internet gateway, NAT gateway, and security groups.
+
+### **Step 2: Build and Push the Docker Image to ECR**
+
+1. **Login to ECR**
+    
+2. **Build and Tag the Image**
+    
+3. **Push the Image**
+    
+
+### **Step 3: Deploy the Application Using Terraform**
+
+1. Run Terraform commands:
+    
+    ```bash
+    bash
+    Copy code
+    terraform init
+    terraform plan
+    terraform apply
+    
+    ```
+    
+2. This creates:
+    - ECS Cluster and Service
+    - Task Definition (linked to the ECR image)
+    - ALB with DNS output
+    - Auto-scaling configuration
+
+### **Step 4: Validate the Deployment**
+
+1. Access the application using the ALB DNS name from the Terraform output:
+    
+    ```bash
+    bash
+    Copy code
+    http://<load_balancer_dns>
+    
+    ```
+    
+2. Verify:
+    - Index page displays the secret word.
+    - `/docker`, `/secret_word`, and `/loadbalanced` endpoints work as expected.
 
 
 ## **1. Prerequisites**
