@@ -2,7 +2,7 @@
 I have performed this task in KodeKloud Playgrounds.
 ---
 
-### **Summary Plan of Action for Deploying the our Node.js Application in AWS**
+### **Summary Plan of Action for Deploying our Node.js Application in AWS**
 
 ### **Step 1: Set Up AWS Resources Using Terraform**
 
