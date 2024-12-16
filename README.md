@@ -1,4 +1,4 @@
-### **Rearc Quest Submission by Sujit Ghodajkar**
+## **Rearc Quest Submission by Sujit Ghodajkar**
 I have performed this task in KodeKloud Playgrounds.
 ---
 
@@ -100,6 +100,7 @@ Use the provided Dockerfile to build the docker image of our Node.js application
     ```
 ---
 ![alt text](Images/Docker-image-push-ECR.png)
+
 ![alt text](Images/Image-ECR.png)
 
 ### **Step 2: Write Terraform Configuration for AWS Resources**
@@ -155,7 +156,9 @@ Run the following commands to deploy the resources:
 resources created in the AWS as below:
 
 ![alt text](Images/Task_definition_ECS.png)
+
 ![alt text](Images/AWS-ECS-service-started.png)
+
 ![alt text](Images/AWS-loadbalancer-details.png)
 
 ### **Step 4: Access the Application**
@@ -181,3 +184,33 @@ Our application accessible on the web using load-balancer DNS:
     ```
 
 ---
+
+### **Given More Time, I Would Improve...**
+
+1. **Enhance Security**
+    - **TLS Configuration**: I tried using self-signed certificates for TLS this time but still couldn’t achieve the TLS (HTTPS). As in a production environment, I would use AWS Certificate Manager (ACM) to issue and manage proper SSL certificates for secure HTTPS connections.
+    - **IAM Role Optimization**: The IAM roles created have broad permissions for the deployment. With more time, I would provide least privilege by refining the IAM policies to grant only the minimum required permissions.
+2. **Enhance Monitoring**
+    - **Enhanced Monitoring**: While basic CloudWatch metrics are enabled, I would integrate a robust monitoring solution like AWS CloudWatch Logs Insights or a third-party tool such as Grafana or Prometheus to track application performance and container health in detail.
+3. **Auto-Scaling Fine-Tuning**
+    - The auto-scaling policy is based solely on CPU utilization (>70%). Given more time, I would incorporate additional metrics like memory usage, request count, and response times to create a more balanced and responsive scaling mechanism.
+4. **Infrastructure as Code (IaC) Best Practices**
+    - **Modularize Terraform Code**: I would refactor the terraform files into reusable modules (e.g., for ECS, ALB, and VPC) to improve maintainability and reusability.
+    - **State Management**: A local backend was used for the Terraform state file. In a production setting, I would use a remote backend like an S3 bucket with DynamoDB state locking to enable collaboration and state management.
+5. **Load Balancer Optimization**
+    - Currently, the load balancer uses a simple HTTP listener. With more time and resources, I would have achieved the HTTPS and Domain routing
+6. **Secrets Management**
+    - The `SECRET_WORD` was passed directly as an environment variable. Ideally, I would use AWS Secrets Manager to securely store and retrieve sensitive data.
+7. **Documentation**
+    - I provided a basic README, but more comprehensive documentation would be added, including detailed setup instructions, architectural diagrams, and troubleshooting guides for easier handover and understanding.
+8. **Cross-Cloud Deployment**
+    - I focused on AWS for this deployment. With additional time, I would demonstrate the ability to deploy the application in multiple cloud providers (e.g., GCP, Azure) to showcase cross-cloud proficiency.
+    - I tried the deployment in Azure using app service, service plan and load balancing but couldn’t complete it. see the proof below:
+
+    ![alt text](Images/azure-docker-image-registry.png)
+
+    ![alt text](Images/Azure-Deploy-Failure-AppService.png)
+
+### 
+
+By addressing these areas, the solution could evolve into a production-grade deployment with greater reliability, security, and maintainability.
