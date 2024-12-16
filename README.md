@@ -104,12 +104,10 @@ Run the following commands to deploy the resources:
 
 ---
 
-## **3. Cleanup**
+3. Cleanup - To avoid incurring costs, delete all resources created:
 
-To avoid incurring costs, delete all resources created:
-
-    
     ```
     terraform destroy
     ```
+
 ---
