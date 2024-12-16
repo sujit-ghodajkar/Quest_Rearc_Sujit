@@ -1,5 +1,5 @@
 ### **Rearc Quest Submission by Sujit Ghodajkar**
-
+I have performed this task in KodeKloud Playgrounds.
 ---
 
 ### **Summary Plan of Action for Deploying the our Node.js Application in AWS**
@@ -98,7 +98,9 @@ Use the provided Dockerfile to build the docker image of our Node.js application
     docker tag <your-app-repo>:latest <account_id>.dkr.ecr.<region>.amazonaws.com/<your-app-repo>:latest
     docker push <account_id>.dkr.ecr.<region>.amazonaws.com/<your-app-repo>:latest
     ```
-    
+---
+![alt text](Docker-image-push-ECR.png)
+![alt text](Image-ECR.png)
 
 ### **Step 2: Write Terraform Configuration for AWS Resources**
 
@@ -150,6 +152,12 @@ Run the following commands to deploy the resources:
 
 ---
 
+resources created in the AWS as below:
+
+![alt text](Task_definition_ECS.png)
+![alt text](AWS-ECS-service-started.png)
+![alt text](AWS-loadbalancer-details.png)
+
 ### **Step 4: Access the Application**
 
 1. Retrieve the DNS name of the Application Load Balancer from the Terraform output or AWS Management Console.
@@ -161,6 +169,10 @@ Run the following commands to deploy the resources:
     
 
 ---
+
+Our application accessible on the web using load-balancer DNS:
+
+![alt text](AWS-deployment-finalpage.png)
 
 3. Cleanup - To avoid incurring costs, delete all resources created:
 
