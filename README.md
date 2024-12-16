@@ -99,8 +99,8 @@ Use the provided Dockerfile to build the docker image of our Node.js application
     docker push <account_id>.dkr.ecr.<region>.amazonaws.com/<your-app-repo>:latest
     ```
 ---
-![alt text](Docker-image-push-ECR.png)
-![alt text](Image-ECR.png)
+![alt text](Images/Docker-image-push-ECR.png)
+![alt text](Images/Image-ECR.png)
 
 ### **Step 2: Write Terraform Configuration for AWS Resources**
 
@@ -154,9 +154,9 @@ Run the following commands to deploy the resources:
 
 resources created in the AWS as below:
 
-![alt text](Task_definition_ECS.png)
-![alt text](AWS-ECS-service-started.png)
-![alt text](AWS-loadbalancer-details.png)
+![alt text](Images/Task_definition_ECS.png)
+![alt text](Images/AWS-ECS-service-started.png)
+![alt text](Images/AWS-loadbalancer-details.png)
 
 ### **Step 4: Access the Application**
 
@@ -172,7 +172,7 @@ resources created in the AWS as below:
 
 Our application accessible on the web using load-balancer DNS:
 
-![alt text](AWS-deployment-finalpage.png)
+![alt text](Images/AWS-deployment-finalpage.png)
 
 3. Cleanup - To avoid incurring costs, delete all resources created:
 
