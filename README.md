@@ -1,4 +1,4 @@
-### **Rearc Quest Submission from Sujit Ghodajkar**
+### **Rearc Quest Submission by Sujit Ghodajkar**
 
 ---
 
